@@ -33,10 +33,10 @@ abstract class ModelTestCase extends TestCase
         $this->assertEquals($this->expectedFillables(), $modelFillable);
     }
 
-    public function test_incrementing_is_false()
-    {
-        $this->assertFalse($this->model()->incrementing);
-    }
+//    public function test_incrementing_is_false()
+//    {
+//        $this->assertFalse($this->model()->incrementing);
+//    }
 
     public function test_has_casts()
     {

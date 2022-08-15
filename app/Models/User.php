@@ -42,6 +42,4 @@ class User extends Authenticatable
         'id' => 'string',
         'email_verified_at' => 'datetime',
     ];
-
-    public $incrementing = false;
 }
