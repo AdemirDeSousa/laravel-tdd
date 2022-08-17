@@ -10,6 +10,8 @@ interface UserRepositoryInterface
 
     public function findAll(): array;
 
+    public function paginate(int $page = 10): PaginationInterface;
+
     public function create(array $data): User;
 
     public function update(string $email, array $data): User;
