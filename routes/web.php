@@ -6,6 +6,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('{shortUrl:code}', function (\App\Models\ShortUrl $shortUrl){
+
+    $shortUrl->visits()->create([
+        'ip_address' => request()->ip(),
+        'user_agent' => request()->userAgent()
+    ]);
+
+    return ['Laravel' => app()->version()];
+});
+
 Route::post('/register', \App\Http\Controllers\RegisterController::class)->name('register');
 
 Route::middleware('auth')->group(function(){
